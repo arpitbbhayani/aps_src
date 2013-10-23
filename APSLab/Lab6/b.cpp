@@ -73,13 +73,13 @@ void printlevelorder(struct node *root) {
 	}
 }
 
-int insert_trie ( struct node ** root , long int number ) {
+int insert_trie ( struct node ** root , long long int number ) {
 
 	struct node * temp = *root;
 
 	char number_str[13];
 
-	sprintf(number_str , "%ld" , number);
+	sprintf(number_str , "%lld" , number);
 
 	if ( (*root) == NULL ) {
 		(*root) = create_node(-1);
@@ -140,7 +140,7 @@ int main ( int argc , char * argv[] ) {
 
 	while ( t-- ) {
 
-		//vector<long int> vec;
+		//vector<long long int> vec;
 		vector<string> vec;
 
 		int n;
@@ -154,6 +154,7 @@ int main ( int argc , char * argv[] ) {
 
 		for( int i = 0 ; i < n ; i++ ) {
 			string number;
+			//long long int number;
 			cin >> number;
 			vec.push_back(number);
 		}
