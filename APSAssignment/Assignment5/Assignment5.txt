@@ -1,0 +1,290 @@
+**********************************************************************
+Question 1
+**********************************************************************
+
+Problem code: CAM5
+
+help the Prayatna pr team
+
+ 
+
+ Well, the annual technical symposium of Department of Computer Technology is around the corner. All that we need, to make it a grand success is Publicity among the peer groups ( ofCourse the sponsors too :P ). We dicided to share the job between the student groups. As per the plan we decided to meet people in person and influence them to attend Prayatna. But to meet them we have to go to various student groups. To do so, we had to cut our classes. But being studious. students refused to cut more classes. Instead of meeting every one in person we decided to meet few people such that the person to whom we pass the news will spread it to all his friends. And those friends will pass it to other friends and so on. Your task is to find the number of people to be met by the organizers to spread the news. 
+
+ 
+
+caution: large I/O
+
+Input
+
+ 
+
+First line of input is 't' - Test cases. Follwed by N, the number of peers in the testcase ( 0 to N-1 ). followed by the no.of friend description 'e'. Following are 'e' descriptions of type  
+
+" a b " denoting 'a' friends with 'b' . if 'a' is friends with 'b' then 'b' is firends with 'a'.
+
+ 
+
+Output
+
+Output contains t line, the number of people, the organizers have to meet in person for each test case.
+
+Example
+
+Input:
+2
+
+4
+2
+0 1 
+1 2
+
+
+3
+0
+
+Output:
+2
+3
+Test case Expalained: 
+
+case 1 : 0 is friends with 1; 1 is friends with 2 ;  so if we pass the news to 0 & 3 , news will pass it to the entire N peers
+case 2 : no one is friends with any one. So we have to meet every one in person. 
+Constraints: 
+
+t=10
+2 <= N <= 100000
+0 <= e <= N/2
+
+**********************************************************************
+Question 2
+**********************************************************************
+
+The Benefactor
+
+Another chapter of the municipal chronicles of a well known unbelievable lordly major town (if this town is not well known to you, you might want to solve problem CSTREET first) tells us the following story: 
+Once upon a time the citizens of the unbelievable lordly major town decided to elect a major. At that time this was a very new idea and election campaigns were completely unknown. But of course several citizens wanted to become major and it didn't took long for them to find out, that promising nice things that never will become real tends to be useful in such a situation. One candidate to be elected as a major was Ivo sometimes called the benefactor because of his valuable gifts to the unbelievably lordly major towns citizens.
+One day before the election day Ivo the benefactor made a promise to the citizens of the town. In case of his victory in the elections he would ensure that on one of the paved streets of the town street lamps would be erected and that he would pay that with his own money. As thrifty as the citizens of the unbelievable lordly major town were, they elected him and one day after the elections they presented him their decision which street should have street lamps. Of course they chose not only the longest of all streets but renamed several streets so that a very long street in the town existed. 
+Can you find how long this street was? To be more specific, the situation is as follows. You are presented a list of all paved streets in the unbelievable lordly major town. As you might remember from problem CSTREET in the town the streets are paved in a way that between every two points of interest in the town exactly one paved connection exists. Your task is to find the longest distance that exists between any two places of interest in the city.
+
+Input
+
+The first line of input contains the number of testcases t.
+The first line of each testcase contains the number of places (2 <=n<=50000) in the town. Each street is given at one line by two places (1<=a,b<=n) and the length of the street (0<=l<20000).
+
+Output
+
+For each testcase output one line which contains the maximum length of the longest street in the city.
+
+Example
+
+Input:
+1
+6
+1 2 3
+2 3 4 
+2 6 2
+6 4 6
+6 5 5
+
+Output:
+
+12
+
+**********************************************************************
+Question 3
+**********************************************************************
+
+COSTLY CHESS
+
+In the country of Rome, Chess is a royal game. For evey move the players had to give some bucks to the Emperor Jurg. The LGMs or Little Green Men, are very good player of chess. But as the chess is a expensive game, thats why it is royal, they asked you to help them find the minimum bucks which they had to pay for moving their Knight from one position to another. Any number of steps can be used to reach the destination.
+
+Constraints:
+
+The chess has a dimension of 8X8, and the index of left bottom cell (0, 0).
+
+Knight move only in a standard way, i.e. 2 row and 1 col or 1 row and 2 col.
+
+If in a step Knight move from (a, b) to (c, d), then LGM had to pay a*c + b*d bucks to Emperor Jurg.
+
+0 ≤ a, b, c, d ≤ 7
+
+Input
+
+There are 100-150 test cases. Each test case is composed of four space separeated integers.The first two numbers, a, b, are the starting position of the Knight and the next two, c, d, are the destination of the Knight. Read upto End Of File.
+
+Output
+
+For each test case, print the minimum amount of bucks they had to pay in separate line. If its impossible to reach the destination then print -1.
+
+Example
+
+Input:
+2 5 5 2
+4 7 3 2
+1 2 3 4
+
+Output:
+42
+78
+18
+
+
+Explanation for test case #1:
+2 5 5 2
+
+For moving Knight from (2, 5) to (5, 2) in minimum cost,  one of the path is (2, 5) -> (3, 3) ->(5, 2)
+Bucks paid:
+(2, 5)              =  0
+(2, 5) -> (3, 3) =  0 + (2*3 + 5*3) = 21
+(3, 3) -> (5, 2) = 21 + (3*5 + 3*2) = 42
+     
+
+To infinity and beyond...
+
+**********************************************************************
+Question 4
+**********************************************************************
+
+Roommate Agreement
+Submitted solutions: 3
+Leonard was always sickened by how Sheldon considered himself better than him. To decide once and for all who is better among them they decided to ask each other a puzzle. Sheldon pointed out that according to Roommate Agreement Sheldon will ask first. Leonard seeing an opportunity decided that the winner will get to rewrite the Roommate Agreement.
+
+Sheldon thought for a moment then agreed to the terms thinking that Leonard will never be able to answer right. For Leonard, Sheldon thought of a puzzle which is as follows. He gave Leonard n numbers, which can be both positive and negative. Leonard had to find the number of continuous sequence of numbers such that their sum is zero.
+
+ For example if the sequence is- 5, 2, -2, 5, -5, 9
+
+There are 3 such sequences
+
+2, -2
+
+5, -5
+
+2, -2, 5, -5
+
+Since this is a golden opportunity for Leonard to rewrite the Roommate Agreement and get rid of Sheldon's ridiculous clauses, he can't afford to lose. So he turns to you for help. Don't let him down.
+
+ 
+
+Input
+
+First line contains T - number of test cases
+
+Second line contains n - the number of elements in a particular test case.
+
+Next line contain n elements, ai  (1<=i<= n) separated by spaces.
+
+ 
+
+Output
+
+The number of such sequences whose sum if zero.
+
+ 
+
+Constraints
+
+1<=t<=5
+
+1<=n<=10^6
+
+-10<= ai <= 10
+
+ 
+
+Example
+
+Input:
+2
+
+4
+
+0 1 -1 0
+
+6
+
+5 2 -2 5 -5 9
+
+
+Output:
+
+6
+3
+
+**********************************************************************
+Question 5
+**********************************************************************
+
+Problem code: FARIDA
+
+Once upon time there was a cute princess called Farida living in a castle with her father, mother and uncle. On the way to the castle there lived many monsters. Each one of them had some gold coins. Although they are monsters they will not hurt. Instead they will give you the gold coins, but if and only if you didn't take any coins from the monster directly before the current one. To marry princess Farida you have to pass all the monsters and collect as many coins as possible. Given the number of gold coins each monster has, calculate the maximum number of coins you can collect on your way to the castle.
+
+Input
+
+The first line of input contains the number of test cases. Each test case starts with a number N, the number of monsters, 0 <= N <= 10^4. The next line will have N numbers, number of coins each monster has, 0 <= The number of coins with each monster <= 10^9. Monsters described in the order they are encountered on the way to the castle.
+
+Output
+
+For each test case print “Case C: X” without quotes. C is the case number, starting with 1. X is the maximum number of coins you can collect.
+
+Example
+
+Input:
+2
+5
+1 2 3 4 5
+1
+10
+Output:
+Case 1: 9
+Case 2: 10
+
+
+
+**********************************************************************
+Question 6
+**********************************************************************
+
+Building Bridges
+Submitted solutions: 1
+The tribe soon discovers that just communication is not enough and wants to meet each other to form a joint force against the terminator. But there is a deep canyon that needs to crossed. Points have been identified on both sides on which bridge ends can be made. But before the construction could be started, a witch Chudael predicted that a bridge can only be built between corresponding end points, i.e. a bridge starting from the ith end point on one side can only end on the ith end point on the other side, where the position of end points is seen in the order in which the points were identified. If not, it would lead to the end of the tribe. The tribe just wants to make as many non-cutting bridges as possible, with the constraint in mind. Bridges "cut" if and only if they have exactly one common point that is not an end point.
+
+Input
+
+The first line of the input contains test cases t (1<=t<=50). It is followed by 3*t lines, 3 for each test case. The first line of input for each test case contains the number of end points identified on each side, n (1<=n<=103). The second line contains x-coordinates of end points identified on the first side and similiarly the third line contains the x-coordinates of corresponding end points identified on the other side. The end points are inputted in the order in which they were identified. The x-coordinates can range between -103 to 103.
+
+Output
+
+You are required to output a single line for each test case. The line contains a single integer – the maximum number of bridges possible with the constraints explained above.
+
+Example
+
+Input:
+3
+4
+
+2 5 8 10
+
+6 4 1 2
+
+3
+
+5 3 10
+
+6 4 1
+
+6
+
+1 2 3 4 5 6
+
+3 4 5 6 1 2
+
+Output:
+2
+
+2
+
+4
+
+ 
+
+Expalanation: For the first test case, two non-overlapping bridges can be formed between the 3rd and 4th end points on each side.

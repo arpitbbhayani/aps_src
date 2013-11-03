@@ -24,6 +24,8 @@ struct node * create_node ( int val ) {
 
 int index_preorder = 0;
 
+int least_common_ancestor( vector<int> , vector<int> , int , int );
+
 struct node * construct_tree ( vector<int> inorder , vector<int> preorder , int start , int end ) {
 
 	if ( start > end ) {
@@ -70,6 +72,42 @@ int least_common_ancestor_r ( struct node * root , int a , int b ) {
 	return 0;
 }
 
+int least_common_ancestor ( vector<int> preorder , vector<int> inorder , int a , int b ) {
+
+	int count = 0;
+
+	int index_a = 0 , index_b = 0;
+
+	for ( unsigned int i = 0 ; i < inorder.size() ; i++ ) {
+		if ( inorder[i] == a ) {
+			index_a = i;
+			count ++;
+		}
+		if ( inorder[i] == b ) {
+			index_b = i;
+			count ++;
+		}
+		if ( count == 2 )
+			break;
+	}
+
+	if ( index_a > index_b ) {
+		int t = index_a;
+		index_a = index_b;
+		index_b = t;
+	}
+
+	for( unsigned int i = 0 ; i < preorder.size() ; i++ ) {
+		for ( int j = index_a ; j <= index_b ; j++ ) {
+			if ( preorder[i] == inorder[j] ) {
+				return inorder[j];
+			}
+		}
+	}
+
+	return preorder[0];
+} 
+
 int main( int argc , char * argv[] ) {
 
 	int n , a ;
@@ -88,7 +126,7 @@ int main( int argc , char * argv[] ) {
 	}
 
 
-	struct node * root = construct_tree ( inorder , preorder , 0 , n - 1 );
+	/*struct node * root = construct_tree ( inorder , preorder , 0 , n - 1 );
 
 	cin >> n;
 
@@ -98,8 +136,14 @@ int main( int argc , char * argv[] ) {
 
 		cout << least_common_ancestor_r( root , a , b ) << endl;
 
-	}
+	}*/
 
+	cin >> n;
+	for ( int i = 0 ; i < n ; i++ ) {
+		int a , b;
+		cin >> a >> b;
+		cout << least_common_ancestor ( preorder , inorder , a , b ) << endl;
+	}
 
 	return 0;
 }
